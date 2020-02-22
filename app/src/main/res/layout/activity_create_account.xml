@@ -15,44 +15,70 @@
         >
 
         <ImageView
-            android:layout_width="267dp"
-            android:layout_height="294dp"
+            android:layout_width="204dp"
+            android:layout_height="173dp"
             android:layout_gravity="center"
             android:src="@drawable/logo" />
 
         <EditText
-            android:id="@+id/mail"
+            android:id="@+id/name"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Utilisateur"
+            android:inputType="textPersonName"
+            android:hint="Prenom"
             android:textColorHint="#FCC8B2"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_person"
             android:drawablePadding="10dp"
             android:layout_marginTop="35dp"
             android:background="@drawable/edit"
             android:padding="20dp"
             />
+
         <EditText
-            android:id="@+id/mdp"
+            android:id="@+id/lastName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Nom"
+            android:textColorHint="#FCC8B2"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit"
+            android:padding="20dp"
+            />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textColorHint="#FCC8B2"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit"
+            android:padding="20dp"
+            />
+        <EditText
+            android:id="@+id/password"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Mot de passe"
             android:textColorHint="#FCC8B2"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_lock"
             android:drawablePadding="10dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edit"
             android:padding="20dp"
             />
         <TextView
-            android:id="@+id/account"
+            android:id="@+id/acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pas de compte ? Inscrivez-vous ici !"
+            android:text="Déjà un compte ? Connectez-vous ici !"
             android:textColor="#685369"
             android:fontFamily="sans-serif-medium"
             android:layout_gravity="right"
@@ -61,11 +87,11 @@
             android:layout_marginRight="35dp"
             />
         <Button
-            android:id="@+id/buttonSignIn"
+            android:id="@+id/buttonSignUp"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:text="Se connecter"
+            android:text="S'inscrire"
             android:textColor="#FCC8B2"
             android:layout_marginTop="20dp"
             android:background="@drawable/button"

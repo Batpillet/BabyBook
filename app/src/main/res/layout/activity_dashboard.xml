@@ -35,6 +35,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.282" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Logout"
+            android:textColor="#FCC8B2"
+            android:background="@drawable/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -84,7 +100,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Suivi de\nCroissance"
-                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textColor="#685369"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -118,7 +135,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
                         android:text="Suivi du\nPoids"
-                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textColor="#685369"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -163,7 +181,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
                         android:text="Suivi des\nVaccins"
-                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textColor="#685369"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -181,7 +200,7 @@
                     android:layout_height="120dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/bg_purple"
+                    android:background="@drawable/bg_sky"
                     android:orientation="vertical">
 
                     <ImageView
@@ -197,7 +216,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
                         android:text="Suivi \nAlimentation"
-                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textColor="#685369"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -243,7 +263,8 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="20dp"
                         android:text="Conseils"
-                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textColor="#685369"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -253,24 +274,23 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/bg_sky"
+                    android:background="@drawable/bg_purple"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/stats"
-                        android:paddingRight="85dp"
                         android:layout_marginBottom="10dp"
-                        android:paddingTop="10dp"/>
+                        android:paddingTop="10dp"
+                        android:paddingRight="85dp"
+                        android:src="@drawable/stats" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -278,7 +298,8 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="20dp"
                         android:text="Statistiques"
-                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textColor="#685369"
                         android:textSize="18sp" />
 
                 </LinearLayout>
