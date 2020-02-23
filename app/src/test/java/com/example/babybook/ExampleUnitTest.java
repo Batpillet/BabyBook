@@ -1,4 +1,4 @@
-package com.example.splashscreenwithlogin;
+package com.example.babybook;
 
 import org.junit.Test;
 

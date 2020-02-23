@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FCC8B2"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context="com.example.babybook.MainActivity">
 
     <ImageView
         android:id="@+id/img"
