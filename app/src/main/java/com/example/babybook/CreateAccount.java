@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +30,9 @@ public class CreateAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        final BabyManager m = new BabyManager(this);
+        m.open();
+
         mFirebaseAuth = FirebaseAuth.getInstance();
         emailId = findViewById(R.id.email);
         name = findViewById(R.id.name);
@@ -43,6 +48,24 @@ public class CreateAccount extends AppCompatActivity {
                 String pass = password.getText().toString();
                 String nom = lastName.getText().toString();
                 String prenom = name.getText().toString();
+
+                m.addBaby(new Baby(0, prenom, nom, 1998));
+
+                Cursor c = m.getBaby();
+                if (c.moveToFirst())
+                {
+                    do {
+                        Log.d("test",
+                                c.getInt(c.getColumnIndex(BabyManager.KEY_ID_BABY)) + "," +
+                                        c.getString(c.getColumnIndex(BabyManager.KEY_NAME_BABY)) + "," +
+                                        c.getString(c.getColumnIndex(BabyManager.KEY_LASTNAME_BABY)) + "," +
+                                        c.getString(c.getColumnIndex(BabyManager.KEY_DATE_BABY))
+                        );
+                    }
+                    while (c.moveToNext());
+                }
+                c.close();
+                m.close();
 
                 if(email.isEmpty()){
                     emailId.setError("Veuillez saisir votre adresse email");
@@ -64,7 +87,7 @@ public class CreateAccount extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(CreateAccount.this, "Erreur", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CreateAccount.this, "Erreur 1", Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 startActivity(new Intent(CreateAccount.this, Dashboard.class));
@@ -73,7 +96,7 @@ public class CreateAccount extends AppCompatActivity {
                     });
                 }
                 else{
-                    Toast.makeText(CreateAccount.this, "Erreur", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateAccount.this, "Erreur 2", Toast.LENGTH_SHORT).show();
                 }
             }
         });
