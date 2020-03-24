@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.babybook.CreateAccount"></activity>
-        <activity android:name="com.example.babybook.Dashboard" />
-        <activity android:name="com.example.babybook.Login" />
-        <activity android:name="com.example.babybook.MainActivity">
+        <activity android:name=".Conseil"></activity>
+        <activity android:name=".CreateAccount" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

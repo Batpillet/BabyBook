@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Conseil">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:background="@color/rose_conseil">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/rythme_vie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rythme de vie"
+                    android:textStyle="bold"
+                    android:textColor="#685369"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Votre bébé est un être sensible dont il faut respecter le
+rythme de vie : il a besoin de stabilité, particulièrement la première année.\nRespectez
+ses horaires de repas et de sommeil.\nLors de changement d'habitudes, adaptez-le
+progressivement à son nouvel environnement."
+                android:textColor="#685369"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:background="@color/rose_conseil">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/alimentation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="10dp"
+                    android:text="Son alimentation"
+                    android:textColor="#685369"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Si vous l'allaitez, ne prennez pas de médicament sans avis médical. Evitez l'alcool et le tabac.\nS'il
+est nourri au biberon, les quantités à donner vous seront indéiquées au fur et à mesure
+lors des visites mensuelles chez le médecin.\nLe régime de votre bébé sera établi
+en fonction de son age et de son poids.\nToujours vérifier
+la température du lait avant de le donner à votre bébé."
+                android:textColor="#685369"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:background="@color/rose_conseil">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/repos" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Son repos"
+                    android:textStyle="bold"
+                    android:textColor="#685369"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Maintenez la température de sa chambre à 19°C au maximum.
+Au delà, humidifiez l'air de la pièce. Eloignez son lit des sources de chaleur et des
+fenêtres.\nUn sommeil de qualité est indispensable à un bon développement.\n"
+                android:textColor="#685369"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

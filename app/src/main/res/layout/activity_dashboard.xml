@@ -15,8 +15,8 @@
         tools:layout_editor_absoluteY="-149dp">
 
         <ImageView
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="105dp"
+            android:layout_height="91dp"
             android:layout_marginTop="32dp"
             android:src="@drawable/profile"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,17 +27,36 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
+            android:id="@+id/nom_baby"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
             android:textColor="#000"
+            android:textSize="40sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.282" />
+            app:layout_constraintVertical_bias="0.245" />
+
+        <TextView
+            android:id="@+id/prenom_baby"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.215" />
 
         <Button
             android:id="@+id/logout"
@@ -53,6 +72,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -208,12 +229,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/alimentation"
-                        android:paddingRight="85dp"
+                        android:layout_width="139dp"
+                        android:layout_height="62dp"
                         android:layout_marginBottom="10dp"
-                        android:paddingTop="10dp"/>
+                        android:layout_marginLeft="12dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="85dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alim" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -259,7 +282,8 @@
                         android:src="@drawable/conseils"
                         android:paddingRight="85dp"
                         android:layout_marginBottom="10dp"
-                        android:paddingTop="10dp"/>
+                        android:paddingTop="10dp"
+                        android:id="@+id/conseil"/>
 
                     <TextView
                         android:layout_width="wrap_content"
