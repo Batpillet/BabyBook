@@ -28,7 +28,6 @@
 
         <TextView
             android:id="@+id/nom_baby"
-<<<<<<< HEAD
             android:layout_width="match_parent"
             android:layout_height="21dp"
             android:autoSizeTextType="uniform"
@@ -49,10 +48,6 @@
             android:layout_height="21dp"
             android:autoSizeTextType="uniform"
             android:gravity="center"
-=======
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
             android:textColor="#000"
             android:textSize="40sp"
             android:textStyle="bold"

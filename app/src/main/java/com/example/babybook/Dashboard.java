@@ -1,13 +1,11 @@
 package com.example.babybook;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-<<<<<<< HEAD
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,16 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-=======
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import androidx.appcompat.app.AppCompatActivity;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.UserInfo;
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
 
 
 public class Dashboard extends AppCompatActivity {
@@ -45,7 +33,6 @@ public class Dashboard extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
     String name, lastName;
     TextView NAME, LASTNAME;
-<<<<<<< HEAD
     ImageView conseil;
     String userID;
 
@@ -55,11 +42,6 @@ public class Dashboard extends AppCompatActivity {
 
     FirebaseDatabase database;
     private DatabaseReference mDatabase;
-=======
-    private FirebaseAuth.AuthStateListener mAuthStateListener;
-    // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,8 +98,8 @@ public class Dashboard extends AppCompatActivity {
         mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               Baby baby = dataSnapshot.getValue(Baby.class);
-               //Log.d(TAG, "Name : " + baby.getName_baby() + "LastName : " + baby.getLastName_baby());
+                Baby baby = dataSnapshot.getValue(Baby.class);
+                //Log.d(TAG, "Name : " + baby.getName_baby() + "LastName : " + baby.getLastName_baby());
 
                 Toast.makeText(getApplicationContext(), "Bienvenue " + baby.getName_baby() + " " + baby.getLastName_baby() + " !" , Toast.LENGTH_SHORT).show();
                 NAME.setText(baby.getName_baby());
@@ -139,21 +121,6 @@ public class Dashboard extends AppCompatActivity {
             String uid = currentUser.getUid();
         }*/
 
-        NAME=(TextView)findViewById(R.id.nom_baby);
-        //LASTNAME = (TextView)findViewById(R.id.lastName);
-
-        final BabyManager db = new BabyManager(this);
-        db.open();
-
-       Cursor c = db.getBaby();
-        if (c.moveToFirst()) {
-            NAME.setText(c.getString(1));
-        }
-       c.close();
-       db.close();
-
-
-
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -162,25 +129,14 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intToMain);
             }
         });
-<<<<<<< HEAD
 
         conseil = (ImageView)findViewById(R.id.conseil);
-=======
-        /*if (user != null) {
-            for (UserInfo profile : user.getProviderData()) {
-                String name = profile.getDisplayName();
-                TextView.setText(name);
-            }
-
-            LinearLayout my_root = (LinearLayout) findViewById(R.id.root);
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
 
         conseil.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-<<<<<<< HEAD
                 Intent myIntent=new Intent(Dashboard.this, Conseil.class);
                 startActivity(myIntent);
             }
@@ -198,11 +154,11 @@ public class Dashboard extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(), baby.getName_baby() + "\n" + baby.getLastName_baby(), Toast.LENGTH_SHORT).show();
 
-           ArrayList<String> array = new ArrayList<>();
-           array.add(baby.getName_baby());
-           array.add(baby.getLastName_baby());
-           ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
-           mListView.setAdapter(adapter);
+            ArrayList<String> array = new ArrayList<>();
+            array.add(baby.getName_baby());
+            array.add(baby.getLastName_baby());
+            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
+            mListView.setAdapter(adapter);
         }
     }
 
@@ -272,14 +228,5 @@ public class Dashboard extends AppCompatActivity {
 
 }
 
-=======
-            TextView.setText(name);
-
-            layout.addView(textView);
-            my_root.addView(layout);*/
-        }
-    }
-
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
 
 

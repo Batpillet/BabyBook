@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
-<<<<<<< HEAD
 import android.graphics.Color;
-=======
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -58,13 +55,6 @@ public class CreateAccount extends AppCompatActivity {
         //Important, on recupere l'instance
         mAuth = FirebaseAuth.getInstance();
 
-<<<<<<< HEAD
-=======
-        final BabyManager m = new BabyManager(this);
-        m.open();
-
-        mFirebaseAuth = FirebaseAuth.getInstance();
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
         emailId = findViewById(R.id.email);
         name = findViewById(R.id.name);
         lastName = findViewById(R.id.lastName);
@@ -92,24 +82,6 @@ public class CreateAccount extends AppCompatActivity {
                 String nom = lastName.getText().toString();
                 String prenom = name.getText().toString();
 
-                m.addBaby(new Baby(0, prenom, nom, 1998));
-
-                Cursor c = m.getBaby();
-                if (c.moveToFirst())
-                {
-                    do {
-                        Log.d("test",
-                                c.getInt(c.getColumnIndex(BabyManager.KEY_ID_BABY)) + "," +
-                                        c.getString(c.getColumnIndex(BabyManager.KEY_NAME_BABY)) + "," +
-                                        c.getString(c.getColumnIndex(BabyManager.KEY_LASTNAME_BABY)) + "," +
-                                        c.getString(c.getColumnIndex(BabyManager.KEY_DATE_BABY))
-                        );
-                    }
-                    while (c.moveToNext());
-                }
-                c.close();
-                m.close();
-
                 if(email.isEmpty()){
                     emailId.setError("Veuillez saisir votre adresse email");
                     emailId.requestFocus();
@@ -126,11 +98,10 @@ public class CreateAccount extends AppCompatActivity {
                     lastName.setError("Veuillez saisir le nom de votre enfant");
                 }
                 else if(!(email.isEmpty() && pass.isEmpty() && prenom.isEmpty() && nom.isEmpty())) {
-<<<<<<< HEAD
                     baby.setName_baby(prenom);
                     baby.setLastName_baby(nom);
-                   Toast.makeText(CreateAccount.this, "données enregistrées", Toast.LENGTH_LONG).show();
-                   mAuth.createUserWithEmailAndPassword(email, pass)
+                    Toast.makeText(CreateAccount.this, "données enregistrées", Toast.LENGTH_LONG).show();
+                    mAuth.createUserWithEmailAndPassword(email, pass)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -145,19 +116,6 @@ public class CreateAccount extends AppCompatActivity {
                                 }
                             });
 
-=======
-                    mFirebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
-                                Toast.makeText(CreateAccount.this, "Erreur 1", Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                startActivity(new Intent(CreateAccount.this, Dashboard.class));
-                            }
-                        }
-                    });
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
                 }
                 else{
                     Toast.makeText(CreateAccount.this, "Erreur 2", Toast.LENGTH_SHORT).show();

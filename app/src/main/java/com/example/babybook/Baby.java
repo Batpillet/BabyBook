@@ -17,13 +17,10 @@ public class Baby {
         this.date_baby = date;
     }
 
-<<<<<<< HEAD
     public Baby(){
 
     }
 
-=======
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
     public int getId_baby() {
         return id_baby;
     }

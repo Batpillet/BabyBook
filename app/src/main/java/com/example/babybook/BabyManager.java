@@ -16,11 +16,7 @@ public class BabyManager {
             " "+KEY_ID_BABY+" INTEGER primary key," +
             " "+KEY_NAME_BABY+" TEXT" +
             " "+KEY_LASTNAME_BABY+ "TEXT" +
-<<<<<<< HEAD
             " "+KEY_DATE_BABY + "INTEGER" +
-=======
-            " "+KEY_DATE_BABY+ "INTEGER" +
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
             ");";
     private MySQLite maBaseSQLite; // notre gestionnaire du fichier SQLite
     private SQLiteDatabase db;
@@ -47,10 +43,7 @@ public class BabyManager {
         // Ajout d'un enregistrement dans la table
 
         ContentValues values = new ContentValues();
-<<<<<<< HEAD
         values.put(KEY_ID_BABY, baby.getId_baby());
-=======
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
         values.put(KEY_NAME_BABY, baby.getName_baby());
         values.put(KEY_LASTNAME_BABY, baby.getLastName_baby());
         values.put(KEY_DATE_BABY, baby.getDate_baby());
@@ -95,10 +88,6 @@ public class BabyManager {
             a.setDate_baby(c.getInt(c.getColumnIndex(KEY_DATE_BABY)));
             c.close();
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> a52cbe9bd4e7201b3a5386bf886694fc8d24d344
         return a;
     }
 
