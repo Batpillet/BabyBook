@@ -2,58 +2,38 @@ package com.example.babybook;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.babybook.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class CreateAccount extends AppCompatActivity {
-    EditText emailId, password, name, lastName;
-    Button signUp;
-    TextView acc;
+    private EditText emailId, password, name, lastName;
+    private Button signUp;
+    private TextView acc;
     private FirebaseAuth mAuth;
-    FirebaseDatabase database;
-    private static final String TAG = "EmailPassword";
     private DatabaseReference ref;
     private Baby baby;
-    private TextView mStatusTextView;
-    private TextView mDetailTextView;
-    FirebaseFirestore fStore;
-    String userID;
-    private ProgressBar progressbar;
+    private FirebaseFirestore fStore;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
         setProgress(R.id.progressBar);
-
-        final DatabaseHelper myDB = new DatabaseHelper(this);
-        //Important, on recupere l'instance
-        mAuth = FirebaseAuth.getInstance();
 
         emailId = findViewById(R.id.email);
         name = findViewById(R.id.name);
@@ -62,12 +42,11 @@ public class CreateAccount extends AppCompatActivity {
         signUp = findViewById(R.id.buttonSignUp);
         acc = findViewById(R.id.acc);
 
-        baby = new Baby();
-
+        mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        ref = FirebaseDatabase.getInstance().getReference().child("Baby");
 
-        database = FirebaseDatabase.getInstance();
-        ref = database.getReference().child("Baby");
+        baby = new Baby();
 
         emailId.setTextColor(Color.parseColor("#FFFFFF"));
         password.setTextColor(Color.parseColor("#FFFFFF"));
@@ -130,13 +109,4 @@ public class CreateAccount extends AppCompatActivity {
             }
         });
     }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-    }
-
 }
