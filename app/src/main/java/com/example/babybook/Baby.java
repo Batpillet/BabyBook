@@ -2,31 +2,33 @@ package com.example.babybook;
 
 import java.util.Date;
 
-public class Baby {
+public class Baby extends Poids {
 
-    private int id_baby;
     private String name_baby;
     private String lastName_baby;
-    private int date_baby;
+    private Poids poids;
 
     // Constructeur
-    public Baby(int id, String nom, String lastName, int date) {
-        this.id_baby=id;
+    public Baby(String nom, String lastName, Poids poids) {
         this.name_baby=nom;
         this.lastName_baby = lastName;
-        this.date_baby = date;
+        this.poids = poids;
     }
 
     public Baby(){
 
     }
 
-    public int getId_baby() {
-        return id_baby;
+    public Baby(Poids poids){
+        this.poids = poids;
     }
 
-    public void setId_baby(int id) {
-        this.id_baby = id;
+    public Poids getPoids() {
+        return poids;
+    }
+
+    public void setPoids(Poids poids) {
+        this.poids = poids;
     }
 
     public String getName_baby() {
@@ -43,14 +45,6 @@ public class Baby {
 
     public String getLastName_baby(){
         return lastName_baby;
-    }
-
-    public void setDate_baby(int date){
-        this.date_baby = date;
-    }
-
-    public int getDate_baby(){
-        return date_baby;
     }
 
 }

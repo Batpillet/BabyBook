@@ -149,6 +149,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/poids"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/poids"
@@ -195,6 +196,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/vaccin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/vaccins"
@@ -230,6 +232,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/alimentation"
                         android:layout_width="139dp"
                         android:layout_height="62dp"
                         android:layout_marginBottom="10dp"
@@ -264,74 +267,30 @@
             android:paddingBottom="24dp">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_blue"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/bg_blue"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/conseils"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/conseil"/>
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/conseils"
-                        android:paddingRight="85dp"
-                        android:layout_marginBottom="10dp"
-                        android:paddingTop="10dp"
-                        android:id="@+id/conseil"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="20dp"
-                        android:text="Conseils"
-                        android:textStyle="bold"
-                        android:textColor="#685369"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/bg_purple"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:paddingTop="10dp"
-                        android:paddingRight="85dp"
-                        android:src="@drawable/stats" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="20dp"
-                        android:text="Statistiques"
-                        android:textStyle="bold"
-                        android:textColor="#685369"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Conseils"
+                    android:textStyle="bold"
+                    android:textColor="#685369"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

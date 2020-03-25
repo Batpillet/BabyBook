@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CroissanceView"></activity>
+        <activity android:name=".Alimentation"></activity>
+        <activity android:name=".PoidsView" />
+        <activity android:name=".Vaccin" />
+        <activity android:name=".CroissanceView" />
         <activity android:name=".croissanceView" />
         <activity android:name=".Conseil" />
         <activity android:name=".CreateAccount" />

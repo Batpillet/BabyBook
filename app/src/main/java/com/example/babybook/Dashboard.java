@@ -23,7 +23,7 @@ public class Dashboard extends AppCompatActivity {
     private static final String TAG = "Dashboard";
     Button btnLogout;
     TextView NAME, LASTNAME;
-    ImageView conseil, croissance;
+    ImageView conseil, croissance, poids, vaccin, alimentation;
     String userID;
 
     @Override
@@ -36,7 +36,10 @@ public class Dashboard extends AppCompatActivity {
         NAME = findViewById(R.id.prenom_baby);
         LASTNAME = findViewById(R.id.nom_baby);
         conseil = findViewById(R.id.conseil);
-        croissance = (ImageView)findViewById(R.id.croissance);
+        croissance = findViewById(R.id.croissance);
+        poids = findViewById(R.id.poids);
+        vaccin = findViewById(R.id.vaccin);
+        alimentation = findViewById(R.id.alimentation);
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Baby");
@@ -50,7 +53,7 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Baby baby = dataSnapshot.getValue(Baby.class);
-                Toast.makeText(getApplicationContext(), "Bienvenue " + baby.getName_baby() + " " + baby.getLastName_baby() + " !" , Toast.LENGTH_SHORT).show(); //Bulle notif de bienvenue
+                Toast.makeText(Dashboard.this, "Bienvenue " + baby.getName_baby() + " " + baby.getLastName_baby() + " !" , Toast.LENGTH_SHORT).show(); //Bulle notif de bienvenue
 
                 //ecriture depuis la BDD sur les textView de nom et prenom
                 NAME.setText(baby.getName_baby());
@@ -69,6 +72,7 @@ public class Dashboard extends AppCompatActivity {
             finish();
             return;
         }
+
         //Deconnexion utilisateur
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,22 +83,48 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+        //Lance l'activité suivi de croissance
         croissance.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
                 Intent myIntent=new Intent(Dashboard.this, CroissanceView.class);
                 startActivity(myIntent);
             }
         });
 
+        //Lance l'activité conseils
         conseil.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-            Intent myIntent=new Intent(Dashboard.this, Conseil.class);
-            startActivity(myIntent);
+                Intent myIntent=new Intent(Dashboard.this, Conseil.class);
+                startActivity(myIntent);
+            }
+        });
+
+        //Lance l'activité suivi de poids
+        poids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent=new Intent(Dashboard.this, PoidsView.class);
+                startActivity(myIntent);
+            }
+        });
+
+        //Lance l'activité suivi des vaccins
+        vaccin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent=new Intent(Dashboard.this, Vaccin.class);
+                startActivity(myIntent);
+            }
+        });
+
+        //Lance l'activité suivi de l'alimentation
+        alimentation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent=new Intent(Dashboard.this, Alimentation.class);
+                startActivity(myIntent);
             }
         });
     }

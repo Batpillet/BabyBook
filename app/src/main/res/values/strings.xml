@@ -5,4 +5,5 @@
     <string name="firebase_status_fmt">Firebase UID: %s</string>
     <string name="firebase_user_management">Firebase User Management</string>
     <string name="signed_out">Signed Out</string>
+    <string name="Description_vaccins">Lors de la première année de la vie de votre enfant, un certain nombre de vaccins sont obligatoires.\n Le tableau ci-desous répertorie les différents vaccins obligatoires et l\'âge auquel vous devrez les faire faire à votre enfant.</string>
 </resources>

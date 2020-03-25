@@ -32,6 +32,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.0'
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.firebase:firebase-firestore:21.4.1'
+    implementation 'com.jjoe64:graphview:4.2.2'
 
     // add SDKs for desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
