@@ -118,7 +118,8 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/taille"
                         android:paddingRight="85dp"
-                        android:layout_marginBottom="10dp"/>
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/croissance"/>
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -23,24 +23,23 @@ public class Dashboard extends AppCompatActivity {
     private static final String TAG = "Dashboard";
     Button btnLogout;
     TextView NAME, LASTNAME;
-    ImageView conseil;
+    ImageView conseil, croissance;
     String userID;
-
-    private static FirebaseUser currentUser;
-    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        setTitle("Votre Dashboard");
 
         btnLogout = findViewById(R.id.logout);
         NAME = findViewById(R.id.prenom_baby);
         LASTNAME = findViewById(R.id.nom_baby);
         conseil = findViewById(R.id.conseil);
+        croissance = (ImageView)findViewById(R.id.croissance);
 
-        currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Baby");
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Baby");
         userID = currentUser.getUid();
 
         NAME.setTextSize(30);
@@ -77,6 +76,16 @@ public class Dashboard extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intToMain = new Intent(Dashboard.this, Login.class);
                 startActivity(intToMain);
+            }
+        });
+
+        croissance.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent myIntent=new Intent(Dashboard.this, CroissanceView.class);
+                startActivity(myIntent);
             }
         });
 
