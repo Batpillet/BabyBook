@@ -7,12 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import com.example.babybook.R;
-
 public class MainActivity extends AppCompatActivity {
 
     Handler handler;
-    Runnable runnable;
     ImageView img;
 
     @Override

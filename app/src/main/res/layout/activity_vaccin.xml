@@ -10,10 +10,14 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_margin="5dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="17sp"
             android:text="@string/Description_vaccins"
             android:textStyle="bold"
             android:paddingBottom="15dp"
@@ -64,7 +68,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F7FEE0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Diphtérie"/>
@@ -92,7 +97,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#FEF6E0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tétanos"/>
@@ -121,7 +127,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F7FEE0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Poliomiélite"/>
@@ -147,7 +154,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#FEF6E0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Coqueluche"/>
@@ -174,7 +182,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F7FEE0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Haemophilus \ninfluenzae \nde type B"/>
@@ -201,7 +210,8 @@
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#FEF6E0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pneumocoque"/>
@@ -227,7 +237,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F7FEE0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hepathite B"/>
@@ -249,10 +260,11 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#FEF6E0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Méningocoque C"/>
+                android:text="Méningo\ncoque"/>
             <TextView android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView android:layout_width="match_parent"
@@ -273,7 +285,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F7FEE0">
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Rougeole\nOreillons\nRubéole"/>

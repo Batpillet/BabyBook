@@ -15,7 +15,6 @@ public class Vaccin extends AppCompatActivity {
         setContentView(R.layout.activity_vaccin);
         setTitle("Tableau des vaccins");
 
-
         getSupportActionBar().setBackgroundDrawable(
                 new ColorDrawable(Color.parseColor("#A3536B")));
 
@@ -24,7 +23,6 @@ public class Vaccin extends AppCompatActivity {
 
 
     //Menu
-
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {

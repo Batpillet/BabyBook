@@ -1,41 +1,35 @@
 package com.example.babybook;
 
+import java.util.ArrayList;
+
 public class Croissance {
 
+    private ArrayList<Double> yAxis = new ArrayList<Double>();
+    private ArrayList<Double> xAxis = new ArrayList<Double>();
 
-    private double taille;
-    private int temps;
-    private int cle;
-
-    public Croissance(){}
-
-    public Croissance (double taille, int temps) {
-        this.taille = taille;
-        this.temps = temps;
+    public Croissance(ArrayList<Double> yAxis, ArrayList<Double> xAxis) {
+        this.yAxis = yAxis;
+        this.xAxis = xAxis;
     }
 
-    public double getTaille() {
-        return taille;
+    public Croissance(){
+
     }
 
-    public void setTaille(double taille) {
-        this.taille = taille;
+    public ArrayList<Double> getyAxis() {
+        return yAxis;
     }
 
-    public int getTemps() {
-        return temps;
+    public void setyAxis(ArrayList<Double> yAxis) {
+        this.yAxis = yAxis;
     }
 
-    public void setTemps(int temps) {
-        this.temps = temps;
+    public ArrayList<Double> getxAxis() {
+        return xAxis;
     }
 
-    public int getCle() {
-        return cle;
-    }
-
-    public void setCle(int cle) {
-        this.cle = cle;
+    public void setxAxis(ArrayList<Double> xAxis) {
+        this.xAxis = xAxis;
     }
 
 }

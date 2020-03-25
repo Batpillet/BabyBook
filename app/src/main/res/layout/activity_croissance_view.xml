@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".CroissanceView">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +18,6 @@
         android:orientation="vertical"
         android:layout_marginTop="10dp">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +26,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Taille"
+                android:layout_marginLeft="20dp"
+                android:text="@string/taille"
                 android:textStyle="bold"
                 android:textColor="#685369"
                 android:textSize="18sp">
@@ -37,9 +35,10 @@
             </TextView>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/taille"
+                android:layout_width="49dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/taille">
+                android:inputType="number">
 
             </EditText>
         </LinearLayout>
@@ -53,49 +52,60 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Temps"
+                android:text="@string/mois"
                 android:textStyle="bold"
+                android:layout_marginLeft="20dp"
                 android:textColor="#685369"
                 android:textSize="18sp">
 
             </TextView>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/temps"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/temps">
+                android:inputType="number">
 
             </EditText>
         </LinearLayout>
+
         <Button
             android:id="@+id/ajout"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:text="Ajout"
-            android:textColor="#FCC8B2"
+            android:text="@string/ajout"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="20dp"
             android:background="@drawable/button"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:id="@+id/see_taille"
-            android:textColor="#685369"
-            android:textSize="18sp">
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
 
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:id="@+id/see_temps"
-            android:textColor="#685369"
-            android:textSize="18sp">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="@string/courbe_croissance"
+                android:textSize="24sp"/>
 
-        </TextView>
+        </LinearLayout>
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/top"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/graph" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

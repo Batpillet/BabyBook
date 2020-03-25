@@ -29,7 +29,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Poids"
+                android:text="@string/poids"
+                android:layout_marginLeft="20dp"
                 android:textStyle="bold"
                 android:textColor="#685369"
                 android:textSize="18sp">
@@ -37,9 +38,9 @@
             </TextView>
 
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/poids"
+                android:layout_width="37dp"
+                android:layout_height="wrap_content"
                 android:inputType="number">
 
             </EditText>
@@ -54,17 +55,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mois"
+                android:text="@string/mois"
                 android:textStyle="bold"
+                android:layout_marginLeft="20dp"
                 android:textColor="#685369"
                 android:textSize="18sp">
 
             </TextView>
 
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/mois"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
                 android:inputType="number">
 
             </EditText>
@@ -75,30 +77,10 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:text="Ajout"
-            android:textColor="#FCC8B2"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="20dp"
             android:background="@drawable/button"
             />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:id="@+id/see_poids"
-            android:textColor="#685369"
-            android:textSize="18sp">
-
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:id="@+id/see_mois"
-            android:textColor="#685369"
-            android:textSize="18sp">
-
-        </TextView>
 
         <LinearLayout
             android:id="@+id/top"

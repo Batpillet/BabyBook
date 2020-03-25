@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Alimentation">
 
-
-
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_margin="5dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="N'oubliez jamais que chaque bébé est différent.\nLaissez
-le vous montrer ce dont il a besoins.\nUtilisez ce tableau seulement comme un
-guide."
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="17sp"
+            android:text="@string/description_alimentation"
             android:textStyle="bold"
             android:paddingBottom="15dp"
             />
@@ -66,9 +65,7 @@ guide."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"
-            android:background="@color/rose_conseil"
-
-            >
+            android:background="@color/rose_conseil">
 
             <TextView
                 android:layout_width="match_parent"
@@ -260,7 +257,7 @@ guide."
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Produits Laitiers"
+                android:text="Produits\nLaitier "
                 android:textStyle="bold"
                 />
             <TextView
@@ -294,7 +291,7 @@ guide."
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Viandes/Poissons"
+                android:text="Viandes\nPoisson"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="match_parent"

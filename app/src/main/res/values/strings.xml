@@ -6,4 +6,18 @@
     <string name="firebase_user_management">Firebase User Management</string>
     <string name="signed_out">Signed Out</string>
     <string name="Description_vaccins">Lors de la première année de la vie de votre enfant, un certain nombre de vaccins sont obligatoires.\n Le tableau ci-desous répertorie les différents vaccins obligatoires et l\'âge auquel vous devrez les faire faire à votre enfant.</string>
+    <string name="taille">Taille (en cm) : </string>
+    <string name="mois">Date (mois de l\'année) : </string>
+    <string name="ajout">Ajout</string>
+    <string name="courbe_croissance">Courbe de croissance</string>
+    <string name="poids">Poids (en kg) : </string>
+    <string name="Suivi_croissance">Suivi de\nCroissance</string>
+    <string name="suivi_poids">Suivi du\nPoids</string>
+    <string name="suivi_vaccins">Suivi des\nVaccins</string>
+    <string name="suivi_alimentation">Suivi \nAlimentation</string>
+    <string name="conseils">Conseils</string>
+    <string name="description_alimentation">N\'oubliez jamais que chaque bébé est différent.\nLaissez le vous montrer ce dont il a besoins.\nUtilisez ce tableau seulement comme un guide.</string>
+    <string name="rythme">Votre bébé est un être sensible dont il faut respecter le rythme de vie : il a besoin de stabilité, particulièrement la première année.\nRespectez ses horaires de repas et de sommeil.\nLors de changement d\'habitudes, adaptez-le progressivement à son nouvel environnement.</string>
+    <string name="aliment">Si vous l\'allaitez, ne prennez pas de médicament sans avis médical. Evitez l\'alcool et le tabac.\nS\'il est nourri au biberon, les quantités à donner vous seront indéiquées au fur et à mesure lors des visites mensuelles chez le médecin.\nLe régime de votre bébé sera établi en fonction de son age et de son poids.\nToujours vérifier la température du lait avant de le donner à votre bébé.</string>
+    <string name="repos">Maintenez la température de sa chambre à 19°C au maximum. Au delà, humidifiez l\'air de la pièce. Eloignez son lit des sources de chaleur et des fenêtres.\nUn sommeil de qualité est indispensable à un bon développement.\n</string>
 </resources>

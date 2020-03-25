@@ -45,9 +45,6 @@ public class Dashboard extends AppCompatActivity {
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Baby");
         userID = currentUser.getUid();
 
-        NAME.setTextSize(30);
-        LASTNAME.setTextSize(30);
-
         //Lecture de la BDD Firebase de l'utilisateur courant via son ID unique (attribué par firebase) : Baby => UserID => nom/prenom/date
         mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
@@ -65,6 +62,9 @@ public class Dashboard extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value", databaseError.toException());
             }
         });
+
+        NAME.setTextSize(60);
+        LASTNAME.setTextSize(60);
 
         //Blindage si l'utilisateur n'est pas connecté, le retourne à l'ecran de connexion
         if (!checkLoggedIn()) {

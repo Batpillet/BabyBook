@@ -1,12 +1,11 @@
 package com.example.babybook;
 
-import java.util.Date;
-
 public class Baby extends Poids {
 
     private String name_baby;
     private String lastName_baby;
     private Poids poids;
+    private Croissance croissance;
 
     // Constructeur
     public Baby(String nom, String lastName, Poids poids) {
@@ -17,6 +16,14 @@ public class Baby extends Poids {
 
     public Baby(){
 
+    }
+
+    public Croissance getCroissance() {
+        return croissance;
+    }
+
+    public void setCroissance(Croissance croissance) {
+        this.croissance = croissance;
     }
 
     public Baby(Poids poids){

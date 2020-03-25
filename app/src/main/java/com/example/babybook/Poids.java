@@ -1,7 +1,6 @@
 package com.example.babybook;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Poids {
     private ArrayList<Double> yAxis = new ArrayList<Double>();

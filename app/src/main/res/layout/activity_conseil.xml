@@ -54,10 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="Votre bébé est un être sensible dont il faut respecter le
-rythme de vie : il a besoin de stabilité, particulièrement la première année.\nRespectez
-ses horaires de repas et de sommeil.\nLors de changement d'habitudes, adaptez-le
-progressivement à son nouvel environnement."
+                android:text="@string/rythme"
                 android:textColor="#685369"
                 android:textSize="14sp" />
 
@@ -99,11 +96,7 @@ progressivement à son nouvel environnement."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="Si vous l'allaitez, ne prennez pas de médicament sans avis médical. Evitez l'alcool et le tabac.\nS'il
-est nourri au biberon, les quantités à donner vous seront indéiquées au fur et à mesure
-lors des visites mensuelles chez le médecin.\nLe régime de votre bébé sera établi
-en fonction de son age et de son poids.\nToujours vérifier
-la température du lait avant de le donner à votre bébé."
+                android:text="@string/aliment"
                 android:textColor="#685369"
                 android:textSize="14sp" />
 
@@ -144,11 +137,9 @@ la température du lait avant de le donner à votre bébé."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="Maintenez la température de sa chambre à 19°C au maximum.
-Au delà, humidifiez l'air de la pièce. Eloignez son lit des sources de chaleur et des
-fenêtres.\nUn sommeil de qualité est indispensable à un bon développement.\n"
+                android:text="@string/repos"
                 android:textColor="#685369"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
